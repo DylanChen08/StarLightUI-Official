@@ -2,7 +2,8 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import Home from './views/Home.vue'
 import Docs from './views/Doc.vue'
-import './index.css'
+// import './index.css'
+import './index.scss'
 import {createWebHashHistory, createRouter} from 'vue-router'
 
 const history = createWebHashHistory()
