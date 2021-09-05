@@ -5,8 +5,8 @@
       <h1>Starlight UI</h1>
       <h2>轻量实用的UI框架</h2>
       <p class="actions">
-        <a href="#">github</a>
-        <a href="#">开始</a>
+        <a href="https://www.github.com">github</a>
+        <router-link to="/doc">快速开始</router-link>
       </p>
     </div>
   </section>
