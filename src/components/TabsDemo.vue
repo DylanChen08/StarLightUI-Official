@@ -1,5 +1,5 @@
 <template>
-
+  TabsDemo
 </template>
 
 <script>

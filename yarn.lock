@@ -23,7 +23,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.10.4", "@babel/parser@^7.15.0", "@babel/parser@^7.9.4":
+"@babel/parser@^7.10.4":
+  version "7.15.5"
+  resolved "https://registry.nlark.com/@babel/parser/download/@babel/parser-7.15.5.tgz?cache=0&sync_timestamp=1630746008183&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fparser%2Fdownload%2F%40babel%2Fparser-7.15.5.tgz#d33a58ca69facc05b26adfe4abebfed56c1c2dac"
+  integrity sha1-0zpYymn6zAWyat/kq+v+1WwcLaw=
+
+"@babel/parser@^7.15.0", "@babel/parser@^7.9.4":
   version "7.15.4"
   resolved "https://registry.nlark.com/@babel/parser/download/@babel/parser-7.15.4.tgz?cache=0&sync_timestamp=1630618914303&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fparser%2Fdownload%2F%40babel%2Fparser-7.15.4.tgz#02f2931b822512d3aad17d475ae83da74a255a84"
   integrity sha1-AvKTG4IlEtOq0X1HWug9p0olWoQ=

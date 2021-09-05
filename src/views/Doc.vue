@@ -4,7 +4,7 @@
     <div class="content">
       <aside v-if="asideVisible">
         <h2>组件列表</h2>
-        <ol v-for="item in docContent" :key="item.index">
+        <ol v-for="item in docContent" :key="item.id">
           <li>
             <router-link :to="item.url">{{ item.name }}</router-link>
           </li>
@@ -27,10 +27,10 @@ export default {
   data() {
     return {
       docContent: [
-        {name: 'switch组件', url: '/doc/switch'},
-        {name: 'Button组件', url: '/doc/button'},
-        {name: 'Dialog组件', url: '/doc/dialog'},
-        {name: 'Tabs组件', url: '/doc/tabs'},]
+        {id:0,name: 'switch组件', url: '/doc/switch'},
+        {id:1,name: 'Button组件', url: '/doc/button'},
+        {id:2,name: 'Dialog组件', url: '/doc/dialog'},
+        {id:3,name: 'Tabs组件', url: '/doc/tabs'},]
     }
   },
   setup() {
