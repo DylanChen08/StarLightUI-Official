@@ -14,7 +14,9 @@ export default {
     // HelloWorld
   },
   setup(){
-    const asideVisible = ref(false)
+    const width = document.documentElement.clientWidth;
+    console.log(`clientWidth is ${width}`)
+    const asideVisible = ref(width <= 500 ? false : true);
     provide('asideVisible',asideVisible)
   }
 }
