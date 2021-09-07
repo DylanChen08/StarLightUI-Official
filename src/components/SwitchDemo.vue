@@ -1,6 +1,12 @@
 <template>
   SwitchDemo
-  <Switch :value="checkingStatusInFather" @input="checkingStatusInFather=$event"/>
+  <!--  下面是 Vue 2 写法-->
+  <!--  <Switch :value="checkingStatusInFather" @input="checkingStatusInFather=$event"/>-->
+  <!--  Vue 3 之后可以这样写-->
+  <!--  <Switch :value="checkingStatus" @update:value="checkingStatus=$event"/> -->
+  <!--Vue 3的 v-model可以将上述再简化如下-->
+  <Switch :value="checkingStatus" v-model:value="checkingStatus"/>
+
 </template>
 
 <script lang="ts">
@@ -11,8 +17,8 @@ export default {
   name: "SwitchDemo",
   components: {Switch},
   setup() {
-    const checkingStatusInFather = ref(false)
-    return {checkingStatusInFather}
+    const checkingStatus = ref(false)
+    return {checkingStatus}
   }
 }
 </script>

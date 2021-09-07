@@ -9,7 +9,7 @@ export default {
   props: {value: Boolean},
   setup(props, context) {
     const toggle = () => {
-      context.emit('input', !props.value) // Vue 3 新的写法 , Vue 2 的话 this.$emit()
+      context.emit('update:value', !props.value) // Vue 3 新的写法 , Vue 2 的话 this.$emit()
     }
     return {toggle}
   }
