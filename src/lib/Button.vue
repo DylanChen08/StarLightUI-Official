@@ -33,7 +33,6 @@ export default {
   },
   setup(props) {
     // setup 使用计算属性 return classes
-    // console.log('setup in button.vue')
     const {theme, size, level} = props;
     const classes = computed(() => {
       // console.log(props.level)
@@ -43,7 +42,6 @@ export default {
         [`starlight-level-${level}`]: level,
       };
     });
-    // console.log(333);
     return {classes};
   },
 };
