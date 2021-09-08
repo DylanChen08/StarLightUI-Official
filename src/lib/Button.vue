@@ -1,12 +1,13 @@
 <template>
-  <button class="starlight-button" :class="{[`starlight-theme-${theme}`]: theme}">
+  <button class="starlight-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="starlight-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
-import { computed } from "vue";
+import {computed} from "vue";
+
 export default {
   props: {
     theme: {
@@ -31,8 +32,9 @@ export default {
     }
   },
   setup(props) {
+    // setup 使用计算属性 return classes
     // console.log('setup in button.vue')
-    const { theme, size, level } = props;
+    const {theme, size, level} = props;
     const classes = computed(() => {
       // console.log(props.level)
       return {
@@ -42,7 +44,7 @@ export default {
       };
     });
     // console.log(333);
-    return { classes };
+    return {classes};
   },
 };
 </script>
