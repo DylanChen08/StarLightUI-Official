@@ -5,7 +5,8 @@
   <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
     <!--具名插槽-->
     <!--https://vue3js.cn/docs/zh/guide/component-slots.html#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD-->
-    <!--父组件 v-slot:content-->
+    <!--[使用插槽]-父组件 v-slot:content-->
+    <!--[注意]插槽需要在子组件内使用-->
     <template v-slot:content>
       <strong>hi</strong>
       <div>hi2</div>
