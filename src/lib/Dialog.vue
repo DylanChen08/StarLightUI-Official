@@ -1,16 +1,19 @@
 <template>
   <template v-if="visible">
+    <!--使用Vue 3 teleport传送到body下面，使他不附属于任何一个div,从而摆脱被其他div挡住要设置z-index的困扰    -->
+    <!--Teleport 提供了一种干净的方法，允许我们控制在 DOM 中哪个父节点下渲染了 HTML，而不必求助于全局状态或将其拆分为两个组件。-->
+    <!--https://v3.vuejs.org/guide/teleport.html-->
     <Teleport to="body">
       <!--      遮罩层,点击遮罩可以关闭dialog-->
-      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="gulu-dialog-wrapper">
-        <div class="gulu-dialog">
+      <div class="starlight-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="starlight-dialog-wrapper">
+        <div class="starlight-dialog">
           <header>
             <!--具名插槽-->
             <!--https://vue3js.cn/docs/zh/guide/component-slots.html#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD-->
             <!--字组件 v-slot:content-->
             <slot name="title"/>
-            <span @click="close" class="gulu-dialog-close"></span>
+            <span @click="close" class="starlight-dialog-close"></span>
           </header>
           <main>
             <slot name="content"/>
@@ -89,7 +92,7 @@ export default {
 $radius: 4px;
 $border-color: #d9d9d9;
 
-.gulu-dialog {
+.starlight-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
