@@ -47,6 +47,63 @@
       <Button>加载完毕</Button>
     </section>
   </section>
+
+  <!--以下为对照的代码，用于上面数据绑定参考-->
+  <!--  <section>Button 示例</section>-->
+  <!--  <h1>示例1</h1>-->
+  <!--  <section>-->
+  <!--    <Button>你好</Button>-->
+  <!--    <Button theme="button">你好</Button>-->
+  <!--    <Button theme="link">你好</Button>-->
+  <!--    <Button theme="text">你好</Button>-->
+  <!--  </section>-->
+  <!--  <h1>示例2</h1>-->
+  <!--  <section>-->
+  <!--    <section>-->
+  <!--      <Button size="big">大大大</Button>-->
+  <!--      <Button>普普通</Button>-->
+  <!--      <Button size="small">小小小</Button>-->
+  <!--    </section>-->
+  <!--    <section>-->
+  <!--      <Button theme="link" size="big">大大大</Button>-->
+  <!--      <Button theme="link">普普通</Button>-->
+  <!--      <Button size="small" theme="link">小小小</Button>-->
+  <!--    </section>-->
+  <!--    <section>-->
+  <!--      <Button size="big" theme="text">大大大</Button>-->
+  <!--      <Button theme="text">普普通</Button>-->
+  <!--      <Button size="small" theme="text">小小小</Button>-->
+  <!--    </section>-->
+  <!--  </section>-->
+  <!--  <h1>示例3</h1>-->
+  <!--  <section>-->
+  <!--    <section>-->
+  <!--      <Button level="main">主要按钮</Button>-->
+  <!--      <Button>普通按钮</Button>-->
+  <!--      <Button level="danger">危险按钮</Button>-->
+  <!--    </section>-->
+  <!--    <section>-->
+  <!--      <Button theme="link" level="main">主要链接按钮</Button>-->
+  <!--      <Button theme="link">普通链接按钮</Button>-->
+  <!--      <Button theme="link" level="danger">危险链接按钮</Button>-->
+  <!--    </section>-->
+  <!--    <section>-->
+  <!--      <Button theme="text" level="main">主要文字按钮</Button>-->
+  <!--      <Button theme="text">普通文字按钮</Button>-->
+  <!--      <Button theme="text" level="danger">危险文字按钮</Button>-->
+  <!--    </section>-->
+  <!--  </section>-->
+  <!--  <h1>示例4</h1>-->
+  <!--  <section>-->
+  <!--    <Button disabled>禁用按钮</Button>-->
+  <!--    <Button theme="link" disabled>禁用链接按钮</Button>-->
+  <!--    <Button theme="text" disabled>禁用按钮</Button>-->
+  <!--  </section>-->
+  <!--  <h1>示例5</h1>-->
+  <!--  <section>-->
+  <!--    <Button loading>加载中</Button>-->
+  <!--    <Button>加载完毕</Button>-->
+  <!--  </section>-->
 </template>
 <script lang="ts">
 

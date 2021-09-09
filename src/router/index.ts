@@ -10,7 +10,6 @@ import {createRouter, createWebHashHistory} from "vue-router";
 const history = createWebHashHistory()
 export const router = createRouter({
     history: history,
-    //嵌套路由
     routes: [
         {path: '/', component: Home},
         {
