@@ -34,6 +34,7 @@ export default {
     }
   },
   setup() {
+    // 不能直接修改props,故使用inject
     const asideVisible = inject<Ref<Boolean>>('asideVisible', false) // set
     return {asideVisible}
   }
