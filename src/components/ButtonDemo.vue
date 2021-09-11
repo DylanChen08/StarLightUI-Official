@@ -1,71 +1,33 @@
 <template>
-  <section>
-    <h1>示例1</h1>
-    <Button v-for="item in buttonSet1" :theme="item.theme">{{ item.innerText }}</Button>
-  </section>
-
-  <section>
-    <h1>示例2</h1>
-    <section>
-      <Button v-for="item in buttonSet2.sub1" :size="item.size" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-    <section>
-      <Button v-for="item in buttonSet2.sub2" :size="item.size" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-    <section>
-      <Button v-for="item in buttonSet2.sub3" :size="item.size" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-  </section>
-
-
-  <section>
-    <h1>示例3</h1>
-    <section>
-      <Button v-for="item in buttonSet3.sub1" :level="item.level" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-    <section>
-      <Button v-for="item in buttonSet3.sub2" :level="item.level" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-    <section>
-      <Button v-for="item in buttonSet3.sub3" :level="item.level" :theme="item.theme">{{ item.innerText }}</Button>
-    </section>
-  </section>
-
-  <section>
-    <h1>示例4</h1>
-    <section>
-      <Button v-for="item in buttonSet4.sub1" :level="item.level" :theme="item.theme" disabled>{{ item.innerText }}
-      </Button>
-    </section>
-  </section>
-
-  <section>
-    <h1>示例5</h1>
-    <section>
-      <Button v-for="item in buttonSet5.sub1" :level="item.level" :theme="item.theme" loading>{{ item.innerText }}
-      </Button>
-      <Button>加载完毕</Button>
-    </section>
-  </section>
+<div>
+  <h1>Button 示例</h1>
+  <Demo :component="Button1Demo" />
+  <Demo :component="Button2Demo" />
+  <Demo :component="Button3Demo" />
+  <Demo :component="Button4Demo" />
+  <Demo :component="Button5Demo" />
+</div>
 </template>
+
 <script lang="ts">
-import store from "../store";
-
-import Button from "../lib/Button.vue";
-
+import Demo from "./Demo.vue";
+import Button1Demo from "./Button1.demo.vue";
+import Button2Demo from "./Button2.demo.vue";
+import Button3Demo from "./Button3.demo.vue";
+import Button4Demo from "./Button4.demo.vue";
+import Button5Demo from "./Button5.demo.vue";
 export default {
-  components: {Button},
-  setup() {
+  components: {
+    Demo
   },
-  data() {
+  setup() {
     return {
-      // 使用vuex全局管理
-      buttonSet1: store.state.buttonSet1,
-      buttonSet2: store.state.buttonSet2,
-      buttonSet3: store.state.buttonSet3,
-      buttonSet4: store.state.buttonSet4,
-      buttonSet5: store.state.buttonSet5,
-    }
-  }
+      Button1Demo,
+      Button2Demo,
+      Button3Demo,
+      Button4Demo,
+      Button5Demo
+    };
+  },
 };
 </script>
