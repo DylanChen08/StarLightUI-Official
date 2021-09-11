@@ -1,6 +1,10 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleAsideVisible">LOGO</div>
+    <div class="logo" @click="toggleAsideVisible">
+      <svg class="icon">
+        <use xlink:href="#icon-king"></use>
+      </svg>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -41,6 +45,10 @@ export default {
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    >svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   > .menu {
