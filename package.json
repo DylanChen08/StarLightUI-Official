@@ -1,5 +1,5 @@
 {
-  "name": "Starlight-ui",
+  "name": "Starlight-UI",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "vue": "3.0.0-rc.1",
-    "vue-router": "4.0.0-beta.3"
+    "vue-router": "4.0.0-beta.3",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "3.0.0-rc.1",
