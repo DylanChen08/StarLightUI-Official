@@ -1,5 +1,5 @@
 <template>
-  <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}">
+  <button class="starlight-switch" @click="toggle" :class="{'starlight-checked':value}">
     <span></span>
   </button>
 </template>
@@ -21,7 +21,7 @@ export const toggle = () => {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-.gulu-switch {
+.starlight-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -40,7 +40,7 @@ $h2: $h - 4px;
     transition: all 250ms;
   }
 
-  &.gulu-checked {
+  &.starlight-checked {
     background: #1890ff;
 
     > span {
@@ -58,7 +58,7 @@ $h2: $h - 4px;
     }
   }
 
-  &.gulu-checked:active {
+  &.starlight-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

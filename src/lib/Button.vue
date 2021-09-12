@@ -1,6 +1,6 @@
 <template>
-  <button class="gulu-button" :class="classes" :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"></span>
+  <button class="starlight-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="starlight-loadingIndicator"></span>
     <slot/>
   </button>
 </template>
@@ -41,9 +41,9 @@ export default {
 const {theme, size, level} = props;
 export const classes = computed(() => {
   return {
-    [`gulu-theme-${theme}`]: theme,
-    [`gulu-size-${size}`]: size,
-    [`gulu-level-${level}`]: level,
+    [`starlight-theme-${theme}`]: theme,
+    [`starlight-size-${size}`]: size,
+    [`starlight-level-${level}`]: level,
   };
 });
 </script>
@@ -55,7 +55,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.gulu-button {
+.starlight-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -89,7 +89,7 @@ $grey: grey;
     border: 0;
   }
 
-  &.gulu-theme-link {
+  &.starlight-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -100,7 +100,7 @@ $grey: grey;
     }
   }
 
-  &.gulu-theme-text {
+  &.starlight-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -111,20 +111,20 @@ $grey: grey;
     }
   }
 
-  &.gulu-size-big {
+  &.starlight-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
 
-  &.gulu-size-small {
+  &.starlight-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
-  &.gulu-theme-button {
-    &.gulu-level-main {
+  &.starlight-theme-button {
+    &.starlight-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -136,7 +136,7 @@ $grey: grey;
       }
     }
 
-    &.gulu-level-danger {
+    &.starlight-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -149,8 +149,8 @@ $grey: grey;
     }
   }
 
-  &.gulu-theme-link {
-    &.gulu-level-danger {
+  &.starlight-theme-link {
+    &.starlight-level-danger {
       color: $red;
 
       &:hover,
@@ -160,8 +160,8 @@ $grey: grey;
     }
   }
 
-  &.gulu-theme-text {
-    &.gulu-level-main {
+  &.starlight-theme-text {
+    &.starlight-level-main {
       color: $blue;
 
       &:hover,
@@ -170,7 +170,7 @@ $grey: grey;
       }
     }
 
-    &.gulu-level-danger {
+    &.starlight-level-danger {
       color: $red;
 
       &:hover,
@@ -180,7 +180,7 @@ $grey: grey;
     }
   }
 
-  &.gulu-theme-button {
+  &.starlight-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -191,14 +191,14 @@ $grey: grey;
     }
   }
 
-  &.gulu-theme-link, &.gulu-theme-text {
+  &.starlight-theme-link, &.starlight-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
 
-  > .gulu-loadingIndicator {
+  > .starlight-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -207,11 +207,11 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: gulu-spin 1s infinite linear;
+    animation: starlight-spin 1s infinite linear;
   }
 }
 
-@keyframes gulu-spin {
+@keyframes starlight-spin {
   0% {
     transform: rotate(0deg)
   }

@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="gulu-dialog-wrapper">
-        <div class="gulu-dialog">
+      <div class="starlight-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="starlight-dialog-wrapper">
+        <div class="starlight-dialog">
           <header>
             <slot name="title"/>
-            <span @click="close" class="gulu-dialog-close"></span>
+            <span @click="close" class="starlight-dialog-close"></span>
           </header>
           <main>
             <slot name="content"/>
@@ -76,7 +76,7 @@ export const onClickCancel = () => {
 $radius: 4px;
 $border-color: #d9d9d9;
 
-.gulu-dialog {
+.starlight-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

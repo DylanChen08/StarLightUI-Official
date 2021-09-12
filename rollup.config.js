@@ -12,13 +12,13 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Gulu',
-    file: 'dist/lib/gulu.js',
+    name: 'starlight',
+    file: 'dist/lib/starlight.js',
     format: 'umd',
     plugins: [terser()]
   }, {
-    name: 'Gulu',
-    file: 'dist/lib/gulu.esm.js',
+    name: 'starlight',
+    file: 'dist/lib/starlight.esm.js',
     format: 'es',
     plugins: [terser()]
   }],

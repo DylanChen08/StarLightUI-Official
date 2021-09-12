@@ -1,12 +1,13 @@
 <template>
-  <div class="gulu-tabs">
-    <div class="gulu-tabs-nav" ref="container">
-      <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :ref="el => { if (t===selected) selectedItem = el }"
+  <div class="starlight-tabs">
+    <div class="starlight-tabs-nav" ref="container">
+      <div class="starlight-tabs-nav-item" v-for="(t,index) in titles"
+           :ref="el => { if (t===selected) selectedItem = el }"
            @click="select(t)" :class="{selected: t=== selected}" :key="index">{{ t }}
       </div>
-      <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
+      <div class="starlight-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="gulu-tabs-content">
+    <div class="starlight-tabs-content">
       <component :is="current" :key="current.props.title"/>
     </div>
   </div>
@@ -50,6 +51,11 @@ onMounted(() => {
     const left = left2 - left1
     indicator.value.style.left = left + 'px'
   }, {
+    /*
+    * Vue-rc13版本升级到正式版的时候,需要加上flush参数。
+    * 新版正式版默认使用{flush:pre}
+    * 由于该项目是运行在rc-12以及以后版本下的，所以要改成{flush:post}
+    * */
     flush: 'post'
   })
 })
@@ -76,7 +82,7 @@ $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
 
-.gulu-tabs {
+.starlight-tabs {
   &-nav {
     display: flex;
     color: $color;
