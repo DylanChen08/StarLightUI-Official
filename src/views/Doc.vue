@@ -96,7 +96,7 @@ $aside-index: 10;
 }
 
 aside {
-  background: lightblue;
+  //background: lightblue;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -120,7 +120,12 @@ aside {
       }
 
       .router-link-active {
-        background: white;
+        background: #91d5ff ;
+        transition: border-color .3s,background .3s,padding .1s cubic-bezier(.215,.61,.355,1);
+        transition-property: border-color, background, padding;
+        transition-duration: 0.3s, 0.3s, 0.1s;
+        transition-timing-function: ease, ease, cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0s, 0s, 0s;
       }
     }
   }

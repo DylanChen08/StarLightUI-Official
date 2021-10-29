@@ -17,8 +17,8 @@
 
 <script lang="ts">
 import Button from '../lib/Button.vue'
-import 'prismjs';
-import 'prismjs/themes/prism.css'
+// import 'prismjs';
+// import 'prismjs/themes/prism.css'
 import {computed, ref} from 'vue';
 
 const Prism = (window as any).Prism
@@ -37,7 +37,7 @@ export default {
     const hideCode = () => codeVisible.value = false
     const codeVisible = ref(false)
     return {
-      Prism,
+      // Prism,
       html,
       codeVisible,
       showCode,
