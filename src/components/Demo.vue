@@ -9,7 +9,8 @@
       <Button @click="showCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
-      <pre class="language-html" v-html="html"/>
+<!--      <pre class="language-html" v-html="html"/>-->
+      {{html}}
     </div>
 
   </div>
@@ -21,7 +22,8 @@ import Button from '../lib/Button.vue'
 // import 'prismjs/themes/prism.css'
 import {computed, ref} from 'vue';
 
-const Prism = (window as any).Prism
+// const Prism = (window as any).Prism
+// console.log('Prism',Prism)
 export default {
   components: {
     Button
@@ -31,9 +33,10 @@ export default {
   },
   setup(props) {
     const html = computed(() => {
-      return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
+      return props.component.__sourceCode
+      // return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
     })
-    const showCode = () => codeVisible.value = true
+    const showCode = () => {codeVisible.value = true; console.log(111,codeVisible.value)}
     const hideCode = () => codeVisible.value = false
     const codeVisible = ref(false)
     return {
