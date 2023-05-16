@@ -1,4 +1,4 @@
-# starlight UI for Vue 3
+# Starlight UI for Vue 3
 
 ## 运行步骤
 
